@@ -1,5 +1,6 @@
 
 import './App.css';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -7,6 +8,9 @@ function App() {
       <h1 className="teste">
         nivia
       </h1>
+
+      
+      <Footer/>
     </div>
   );
 }
