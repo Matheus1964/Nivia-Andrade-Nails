@@ -1,13 +1,9 @@
-
+import AppRoutes from './Routes/Routes'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="teste">
-        nivia
-      </h1>
-    </div>
+    <AppRoutes />
   );
 }
 
