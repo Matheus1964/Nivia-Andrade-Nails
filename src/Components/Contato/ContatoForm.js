@@ -1,10 +1,21 @@
 import './ContatoForm.css';
-import { useForm } from 'react-hook-form'
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 function ContatoForm(){
-  const { register, handleSubmit, formState: {erros} } = useForm()
+  const form = useRef();
 
-  const addMessage = data => console.log(data)
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('Niviamessage', 'template_5m4dv48', e.target, 'Aptwxu7878V0YiRh6')
+      .then((result) => {
+        alert("deu certo");
+      }, (error) => {
+          alert("não deu certo");
+      });
+  };
+
 
 
   return(
@@ -18,25 +29,25 @@ function ContatoForm(){
 
         <div className="card-body-form">
 
-          <form onSubmit={handleSubmit(addMessage)}>
+          <form onSubmit = {sendEmail}>
 
             <div className="fields">
               <label>Nome:</label>
-              <input type="text" name="name" placeholder="Nome" {...register("name")}/>
+              <input type="text" name="name" placeholder="Nome"/>
             </div>
 
             <div className="fields">
               <label>E-mail:</label>
-              <input type="text" name="email" placeholder="E-mail" {...register("email")}/>
+              <input type="text" name="email" placeholder="E-mail" />
             </div>
 
             <div className="fields">
               <label>Mensagem:</label>
-              <textarea type="text" name="message" placeholder="Sua Mensagem" {...register("message")}></textarea>
+              <textarea type="text" name="message" placeholder="Sua Mensagem" ></textarea>
             </div>
 
             <div className="btn-form">
-              <button type="submit">Enviar mensagem</button>
+              <button type="submit" value={sendEmail}>Enviar mensagem</button>
             </div>
 
           </form>
