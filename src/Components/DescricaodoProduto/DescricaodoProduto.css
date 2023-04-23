@@ -1,0 +1,53 @@
+.Container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  width: 50vw;
+  
+  margin-left: 70px;
+  
+}
+.DescricaoProduto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 310px;
+  height: 48px;
+  
+
+  background-color: red;
+}
+.Titulo_produto{
+  padding-left: 10px;
+  color: white;
+
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 39px;
+}
+.DescricaoTexto{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+@media screen and (max-width: 800px) {
+  .Container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  
+    width: 100vw;
+    margin-left: 0;
+  
+  }
+  .DescricaoProduto{
+    max-width: 100%;
+  }
+
+}

@@ -11,8 +11,3 @@ body{
 .container{
   min-height: 100vh;
 }
-
-.teste{
-  display: flex;
-  justify-content: center;
-}
