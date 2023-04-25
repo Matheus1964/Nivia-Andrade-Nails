@@ -1,0 +1,114 @@
+.div-product-item{
+  width: fit-content;
+  margin-bottom: 50px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.span-id{
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.align-span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 3px;
+}
+
+.product-img{
+  border: solid black 1.5px;
+  width: 147px;
+  height: 102px;
+}
+
+.counter-value{
+  height: 30px;
+  width: 40px;
+  font-size: 17px;
+  text-align: center;
+  margin: 0 2px;
+  border: solid #fa00ff 2px;
+}
+
+.button-decrement, .button-increment{
+  height: 30px;
+  width: 30px;
+  border: solid #fa00ff 2px;
+  background-color: rgb(250, 215, 248);
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background .25s ease-in-out;
+}
+
+.button-decrement:hover, .button-increment:hover{
+  background-color: rgb(215, 24, 180);
+}
+
+.input-div{
+  width: fit-content;
+  margin: auto;
+}
+
+
+
+@media (min-width: 100px) and (max-width: 230px){
+  
+  .product-img{
+    border: solid black 1.5px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .div-product-item{
+    width: fit-content;
+    margin: 10px auto 30px auto;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .button-decrement, .button-increment{
+    height: 20px;
+    width: 20px;
+    border: solid #fa00ff 2px;
+    background-color: rgb(250, 215, 248);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background .25s ease-in-out;
+  }
+  
+  .button-decrement:hover, .button-increment:hover{
+    background-color: rgb(215, 24, 180);
+  }
+
+  .counter-value{
+    height: 20px;
+    width: 30px;
+    font-size: 14px;
+    text-align: center;
+    margin: 0 2px;
+    border: solid #fa00ff 2px;
+  }
+
+}
+
+@media (min-width: 231px) and (max-width: 400px){
+  .product-img{
+    border: solid black 1.5px;
+    width: 120px;
+    height: 80px;
+  }
+
+  .div-product-item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    width: fit-content;
+    margin: 10px auto 40px auto;
+  }
+}
