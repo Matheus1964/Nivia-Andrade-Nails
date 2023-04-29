@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Dropdown from './Dropdown';
@@ -7,6 +6,8 @@ import Dropdown from './Dropdown';
 function Navbar() {
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
+  const [navHeight, setNavHeight] = useState(0);
+  const [produtosActive, setProdutosActive] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -27,12 +28,38 @@ function Navbar() {
     }
   };
 
+  useEffect(() => {
+    setNavHeight(document.querySelector('.navbar').offsetHeight);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setNavHeight(document.querySelector('.navbar').offsetHeight);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    document.body.style.paddingTop = navHeight + 'px';
+  }, [navHeight]);
+
+  const toggleDropdown = () => {
+    setDropdown(!dropdown);
+  };
+
+  const handleProdutosClick = () => {
+    setProdutosActive(!produtosActive);
+    setDropdown(!dropdown);
+  };
+
   return (
     <>
       <nav className='navbar'>
         <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-        Nivia Andrade Naíls
-         {/* <i class='fab fa-firstdraft' /> (Caso eu tenha que adicionar um icone na logo)*/}
+          Nivia Andrade Naíls
         </Link>
         <div className='menu-icon' onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -40,44 +67,31 @@ function Navbar() {
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className='nav-item'>
             <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-            Início
+              Início
             </Link>
           </li>
           <li
             className='nav-item'
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
+            onClick={toggleDropdown}
           >
-            <Link
-              to='/Produtos'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
+            <Link to='#' className='nav-links'>
               Produtos <i className='fas fa-caret-down' />
             </Link>
-            {dropdown && <Dropdown />}
+            {dropdown && <Dropdown produtosActive={produtosActive} handleProdutosClick={handleProdutosClick} />}
+          </li>
+          <li className={`nav-item ${dropdown && "dropdown-active"}`}>
+            <Link to='/sobre' className='nav-links' onClick={closeMobileMenu}>
+              Sobre Nós
+            </Link>
           </li>
           <li className='nav-item'>
-            <Link
-              to='/Contato'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
+            <Link to='/contato' className='nav-links' onClick={closeMobileMenu}>
               Contato
             </Link>
           </li>
-          <li className='nav-item'>
-            <Link
-              to='/Sobre'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Sobre
-            </Link>
-          </li>
-          
         </ul>
-       
       </nav>
     </>
   );

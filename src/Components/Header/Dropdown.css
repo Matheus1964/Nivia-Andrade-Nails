@@ -1,5 +1,5 @@
 .dropdown-menu {
-  background: red;
+  background: #c0b7de;
   width: 200px;
   position: absolute;
   top: 80px;
@@ -29,8 +29,21 @@
   padding: 16px;
 }
 
+
 @media screen and (max-width: 960px) {
-  .fa-caret-down {
-    display: none;
+
+  .dropdown-menu {
+    position: flex; 
+    top: 175px; 
+    width: 100%; 
+  }
+
+  .dropdown-menu li {
+    width: 100%; 
+  }
+
+  .dropdown-link {
+    text-align: center;
   }
 }
+

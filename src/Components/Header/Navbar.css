@@ -1,13 +1,14 @@
 .navbar {
-
   background: linear-gradient(90deg, #908ab1 0%, #C8BFE7 50%, #B7AECF 100%);
-
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 .navbar-logo {
@@ -20,8 +21,6 @@
   text-decoration: none;
   font-size: 2rem;
   text-shadow: 2px 2px #78728d;
-
-
 }
 
 .fa-firstdraft {
@@ -75,6 +74,11 @@
     position: absolute;
   }
 
+  .nav-item.dropdown-active {
+    padding-bottom: 30px;
+    padding-top: 155px; 
+  }
+
   .nav-menu {
     display: flex;
     flex-direction: column;
@@ -90,7 +94,6 @@
     height: calc(100% - 80px); /* set the height of nav-menu to the remaining height of the screen after subtracting the navbar height */
     overflow-y: scroll; /* set overflow-y to scroll */
   }
-  
 
   .nav-menu.active {
     background: #7d7792;
@@ -106,6 +109,14 @@
     padding: 2rem;
     width: 100%;
     display: table;
+  }
+
+  .nav-links-p {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+    padding: 100px;
   }
 
   .nav-links:hover {
@@ -153,8 +164,27 @@
     color: #958fab;
     transition: 250ms;
   }
-
  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropdown-btn {
+    background-color: #958fab;
+  }
 }
 
 @media (max-width: 370px) {
