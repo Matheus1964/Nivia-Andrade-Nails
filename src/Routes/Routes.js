@@ -4,13 +4,14 @@ import Home from "../Screens/Home/index";
 import Contato from "../Screens/Contato/index";
 import Login from "../Screens/Login/index";
 import Produto from "../Screens/Produto/index";
+import Navbar from '../Components/Header/Navbar'
 
 function AppRoutes() {
   return (
     // Rotas
 
     <Router>
-      
+        <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Contato" element={<Contato />} />

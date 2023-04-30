@@ -71,16 +71,23 @@ function Navbar() {
             </Link>
           </li>
           <li
-            className='nav-item'
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
-            onClick={toggleDropdown}
-          >
-            <Link to='#' className='nav-links'>
-              Produtos <i className='fas fa-caret-down' />
-            </Link>
-            {dropdown && <Dropdown produtosActive={produtosActive} handleProdutosClick={handleProdutosClick} />}
-          </li>
+  className='nav-item'
+  onMouseEnter={onMouseEnter}
+  onMouseLeave={onMouseLeave}
+  onClick={toggleDropdown}
+>
+  <Link to='#' className='nav-links'>
+    Produtos <i className='fas fa-caret-down' />
+  </Link>
+  {dropdown && (
+    <Dropdown
+      produtosActive={produtosActive}
+      handleProdutosClick={handleProdutosClick}
+      closeMobileMenu={closeMobileMenu} // Add the closeMobileMenu prop
+    />
+  )}
+</li>
+
           <li className={`nav-item ${dropdown && "dropdown-active"}`}>
             <Link to='/sobre' className='nav-links' onClick={closeMobileMenu}>
               Sobre Nós
