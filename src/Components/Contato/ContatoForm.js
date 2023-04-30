@@ -33,17 +33,17 @@ function ContatoForm(){
 
             <div className="fields">
               <label>Nome:</label>
-              <input type="text" name="name" placeholder="Nome"/>
+              <input type="text" name="name" placeholder="Nome" maxlength="40" minlength="2" required/>
             </div>
 
             <div className="fields">
               <label>E-mail:</label>
-              <input type="text" name="email" placeholder="E-mail" />
+              <input type="Email" name="email" placeholder="E-mail"maxlength="40" minlength="2" required />
             </div>
 
             <div className="fields">
               <label>Mensagem:</label>
-              <textarea type="text" name="message" placeholder="Sua Mensagem" ></textarea>
+              <textarea type="text" name="message" placeholder="Sua Mensagem"maxlength="600" minlength="2" required ></textarea>
             </div>
 
             <div className="btn-form">

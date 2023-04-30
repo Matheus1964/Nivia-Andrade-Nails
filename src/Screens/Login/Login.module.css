@@ -1,0 +1,108 @@
+body{
+  background-color: #C8BFE7;
+}
+.Container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  
+
+  width: 640px;
+  height: 656px;
+
+  border-radius: 50px;
+  background-color: white;
+  
+}
+.LoginInput{
+  margin-bottom: 72px;
+  padding-left: 20px;
+  font-size: 20px;
+  width: 80%;
+  height: 56px;
+
+  border: none;
+  outline: 0;
+  border-radius: 50px;
+  background: #D9D9D9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+
+  font-family: 'B612';
+  font-style: normal;
+  font-weight: 700;
+}
+.LoginInput:focus{
+  border: #FA00FF solid 2px;
+}
+
+.LoginInput::placeholder {
+  font-family: 'B612';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: rgba(0, 0, 0, 0.5);
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
+}
+.LoginInput:valid{
+  border: solid 2px green;
+}
+.LoginButton{
+  width: 200px;
+  height: 56px;
+
+  cursor: pointer;
+  border-radius: 50px;
+  border: none;
+  outline: 0;
+  background: #D9D9D9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'B612';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: rgba(0, 0, 0, 0.5);
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.LoginButton:hover{
+  background-color: #FA00FF;
+}
+.LoginButton:active{
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.TituloLogin{
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 63px;
+
+  color: rgba(0, 0, 0, 0.5);
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+@media screen and (max-width: 768px) {
+  .Container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  
+    width: 100vw;
+    height: 100vh;
+    margin-left: 0;
+    border-radius: 0px;
+  
+  }
+  
+
+}
