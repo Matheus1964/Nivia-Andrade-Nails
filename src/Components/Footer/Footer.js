@@ -26,7 +26,7 @@ function Footer() {
                 </a>
               </p>
               <p>
-                <a href="https://www.instagram.com"> {/*Colocar Link do Instagram*/}
+                <a href="https://www.instagram.com" target="_blank"> {/*Colocar Link do Instagram*/}
                   <Instagram_logo className="icon" alt=""/>
                 </a>
               </p>

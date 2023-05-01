@@ -1,6 +1,6 @@
 import './Contato.css'
-import Footer from '../../Components/Footer/index'
-import ContatoForm from '../../Components/Contato/index'
+import Footer from '../../Components/Footer/Footer'
+import ContatoForm from '../../Components/Contato/ContatoForm'
 
 function Contato(){
   const dados_contato = {

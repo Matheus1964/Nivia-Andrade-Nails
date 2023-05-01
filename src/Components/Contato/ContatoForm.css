@@ -57,13 +57,18 @@
 .fields input {
   height: 45px;
 }
+.fields input:valid{
+  border: green solid 2px;
+}
 
 .fields textarea {
   min-height: 200px;
   padding-top: 10px;
   width: 100%;
 }
-
+.fields textarea:valid{
+  border: solid 2px green;
+}
 .btn-form{
   margin-top: 30px;
   text-align: center;
@@ -83,10 +88,16 @@
 
 }
 
+
 .btn-form button:hover{
   background-color: rgb(128, 29, 173);
   transition: 0.5s;
 
+}
+.btn-form button:active{
+  background-color: rgb(128, 29, 173);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 @media screen and (max-width: 880px) {
