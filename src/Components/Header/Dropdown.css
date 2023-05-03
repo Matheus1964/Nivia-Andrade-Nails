@@ -1,5 +1,10 @@
+:root {
+  --cor-do-fundo: #c0b7de;
+  --cor-do-hover: #958fab;
+}
+
 .dropdown-menu {
-  background: #c0b7de;
+  background: var(--cor-do-fundo);
   width: 200px;
   position: absolute;
   top: 80px;
@@ -8,12 +13,16 @@
 }
 
 .dropdown-menu li {
-  background: #c0b7de;
+  background: var(--cor-do-fundo);
   cursor: pointer;
 }
 
+.dropdown-menu li:first-child {
+  border-top: 5px solid var(--cor-do-hover);
+}
+
 .dropdown-menu li:hover {
-  background: #958fab;
+  background: var(--cor-do-hover);
 }
 
 .dropdown-menu.clicked {
@@ -46,7 +55,14 @@
   }
 
   .dropdown-menu li {
+    background: #5e5a70;
     width: 100%; 
+    border: 1px solid var(--cor-do-hover);
+  }
+
+  .dropdown-menu li:hover{
+    background-color: rgb(175, 166, 204);
+    border-radius: 0;
   }
 
   .dropdown-link {
