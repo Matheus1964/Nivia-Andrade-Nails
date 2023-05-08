@@ -1,8 +1,8 @@
 .div-product-item{
   width: fit-content;
   margin-bottom: 50px;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .span-id{
@@ -52,8 +52,22 @@
 .input-div{
   width: fit-content;
   margin: auto;
+  visibility: hidden;
 }
 
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.selected {
+  border: 2px solid #fa00ff;
+  box-shadow: 0 0 10px 5px #fa00ff;
+}
+
+.element{
+  padding: 10px;
+}
 
 
 @media (min-width: 100px) and (max-width: 230px){
