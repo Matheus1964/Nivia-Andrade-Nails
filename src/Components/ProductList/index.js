@@ -56,7 +56,7 @@ function ProductList(){
   }
   
   return (
-    <div>
+    <div className="container-product-list">
       <div className="product-list-div">
       {
         renderProducts()

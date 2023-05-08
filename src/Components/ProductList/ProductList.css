@@ -1,8 +1,13 @@
 .product-list-div{
   display: flex;
   flex-wrap: wrap;
-  margin: 10px;
-  margin-bottom: 70px;
+  flex-direction: row;
+}
+
+.container-product-list{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 8;
 }
 
 .pagination {
@@ -59,3 +64,16 @@
 }
 
 
+/*exemplo - remover depois*/
+.div-exemplo{
+  background-color: rgb(48, 65, 217);
+  height: 600px;
+  flex-grow: 2;
+  min-width: 200px;
+  margin-right: 20px;
+}
+/*exemplo - remover depois*/
+
+.div-row{
+  display: flex;
+}
