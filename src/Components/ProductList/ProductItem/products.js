@@ -79,6 +79,50 @@ const products = [
   {
     id: 20,
     src: "https://via.placeholder.com/150x100?text=Product%2020"
+  },
+  {
+    id: 21,
+    src: "https://via.placeholder.com/150x100?text=Product%2010"
+  },
+  {
+    id: 22,
+    src: "https://via.placeholder.com/150x100?text=Product%2011"
+  },
+  {
+    id: 23,
+    src: "https://via.placeholder.com/150x100?text=Product%2012"
+  },
+  {
+    id: 24,
+    src: "https://via.placeholder.com/150x100?text=Product%2013"
+  },
+  {
+    id: 25,
+    src: "https://via.placeholder.com/150x100?text=Product%2014"
+  },
+  {
+    id: 26,
+    src: "https://via.placeholder.com/150x100?text=Product%2015"
+  },
+  {
+    id: 27,
+    src: "https://via.placeholder.com/150x100?text=Product%2016"
+  },
+  {
+    id: 28,
+    src: "https://via.placeholder.com/150x100?text=Product%2017"
+  },
+  {
+    id: 29,
+    src: "https://via.placeholder.com/150x100?text=Product%2018"
+  },
+  {
+    id: 30,
+    src: "https://via.placeholder.com/150x100?text=Product%2019"
+  },
+  {
+    id: 31,
+    src: "https://via.placeholder.com/150x100?text=Product%2020"
   }
 ];
 
