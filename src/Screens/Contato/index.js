@@ -1,6 +1,7 @@
 import './Contato.css'
 import Footer from '../../Components/Footer/Footer'
 import ContatoForm from '../../Components/Contato/ContatoForm'
+import Navbar from '../../Components/Header/Navbar'
 
 function Contato(){
   const dados_contato = {
@@ -10,6 +11,7 @@ function Contato(){
 
   return (
     <div>
+      <Navbar/>
       <div className="container contato-div">
         <h1 className="title">Contato</h1>
 
