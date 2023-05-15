@@ -44,10 +44,12 @@
   
     width: 100vw;
     margin-left: 0;
+    padding: 0px 15px 0px 15px;
   
   }
   .DescricaoProduto{
     max-width: 100%;
+    border-radius: 5px;
   }
 
 }
