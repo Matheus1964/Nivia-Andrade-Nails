@@ -48,3 +48,13 @@
   padding: 30px 120px; 
   cursor: pointer;
 }
+
+.produtos button:hover {
+  background-color: var(--hover-color);
+}
+
+@media screen and (max-width: 395px) {
+  .produtos button {
+    padding: 20px 60px; 
+  }
+}
