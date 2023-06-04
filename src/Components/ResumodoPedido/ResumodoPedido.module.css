@@ -1,0 +1,43 @@
+.Container{
+  display: flex;
+  
+  flex-direction: column;
+  align-items: center;
+
+  width: 310px;
+  height: 70vh;
+
+  background-color: #9747FF;
+}
+.Container h1{
+  margin-top: 20px;
+}
+.Titulo_Manual{
+  margin-right: auto;
+  margin-top: 23px;
+  margin-bottom: 60px;
+}
+.Inputs_Valor{
+  width: 100%;
+  margin-bottom: 12px;
+
+  
+  
+}
+.Inputs{
+  width: 80%;
+  
+}
+.Inputs p{
+   margin-bottom: 20px;
+}
+.Total_Resumo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 3rem;
+
+  background-color: white;
+  border-radius: 20px;
+}
