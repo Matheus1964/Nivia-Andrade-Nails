@@ -1,0 +1,107 @@
+.overlay{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(212, 112, 228, 0.522);
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.modal{
+  position: relative;
+  width: 80vw;
+  max-width: 400px;
+  max-height: 100%;
+  margin: 0 auto;
+}
+
+.modal-body{
+  padding: 20px 24px;
+  border-radius: 15px;
+  background-color: #C8BFE7;
+}
+
+.align-img{
+  display: flex;
+  justify-content: center;
+}
+
+.text-confirmation{
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.alert-img{
+  width: 100px;
+  height: auto;
+  margin: 0 20px 20px 20px;
+}
+
+.modal-button{
+  background-color: #fa00ff;
+  border-radius: 16px;
+  padding: 10px;
+  font-weight: 600;
+  color: azure;
+  width: 40%;
+  height: 100%;
+  font-size: 18px;
+}
+
+.align-buttons{
+  display: flex;
+  justify-content: space-between;
+  gap: 15%;
+  margin: 10% 0;
+}
+
+@media (max-width: 400px) {
+  .modal-button{
+    font-size: 0.8em;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .modal{
+    position: relative;
+    width: 90vw;
+    max-width: 400px;
+    max-height: 100%;
+    margin: 0 auto;
+  }
+
+  .alert-img{
+    width: 80px;
+  }
+
+  .text-confirmation{
+    font-size: 1em;
+  }
+
+}
+
+@media (max-width: 250px){
+  .modal-button{
+    font-size: 0.6em;
+  }
+}
