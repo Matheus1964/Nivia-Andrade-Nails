@@ -1,4 +1,6 @@
 import styled from "./ResumodoPedido.module.css"
+import ButtonModal from "../../Components/Modal/ModalButton"
+
 
 function Resumo (){
   return(
@@ -30,7 +32,11 @@ function Resumo (){
             <label>Valor total do produto</label>
             <p className={styled.Total_Resumo}>R$ 30,00</p>
           </div>
+            <ButtonModal/>
+
+          
         </div>
+        
       </div>
       
   )
