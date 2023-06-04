@@ -1,0 +1,133 @@
+:root {
+    --border-color: #FA00FF;
+    --hover-color: #0078ff;
+    --button-color: #9747FF;
+    --form-text-color: #777;
+  }
+  
+  /* Botão do WhatsApp */
+  .floating-btn {
+    position: fixed;
+    width: 70px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    color: none;
+    border: none;
+    background: none;
+  }
+  
+  .floating-btn:hover {
+    border: 4px solid transparent;
+  }
+  
+  /* Dialog form */
+  .dialog {
+    position: fixed;
+    width: 350px;
+    bottom: 40px;
+    right: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    z-index: 9999;
+    padding: 25px;
+    display: block;
+    text-align: center;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+  }
+    
+  .dialog input,
+  .dialog textarea {
+    width: 100%;
+    font-family: 'Saira';
+    font-weight: 700;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+    border-radius: 10px;
+    border: 1.5px solid var(--border-color);
+    background: rgba(175, 171, 171, 0.74);
+  }
+
+  .dialog textarea {
+    resize: none;
+  }
+
+  .dialog textarea::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .dialog textarea::-webkit-scrollbar-thumb {
+    background: rgb(98, 98, 98); 
+    border-radius: 10px;
+  }
+  
+  .dialog input:focus,
+  .dialog textarea:focus {
+    border-color: var(--hover-color);
+    outline: none;
+  }
+  
+  .dialog input:valid,
+  .dialog textarea:valid{
+    border-color: green;
+  }
+  
+  .dialog button[type='submit'] {
+    background: var(--button-color);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Saira';
+  }
+  
+  .dialog button[type='submit']:hover {
+    background-color: var(--hover-color);
+  }
+  
+  .dialog .close-btn {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 25px;
+    border: transparent;
+    color: var(--form-text-color);
+    cursor: pointer;
+  }
+  
+  /* Media query para telas pequenas */
+  @media (max-width: 499px) {
+    .floating-btn {
+      bottom: 20px;
+      right: 20px;
+    }
+  
+    .dialog {
+      position: fixed;
+      width: 100%;
+      max-width: 350px;
+      padding: 10px;
+      right: 0;
+      bottom: 0;
+      background-color: #fff;
+      text-align: center;
+    }
+    
+    .dialog input,
+    .dialog textarea {
+      margin-top: 16px;
+      font-size: 16px;
+    }
+
+    .dialog input[type='text']{
+      margin-top: 20px;
+    } 
+    
+  }
