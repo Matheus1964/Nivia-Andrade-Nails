@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css'
 import '../../Components/ProductList/ProductList.css'
+import Header from "../../Components/Header/Navbar"
 
 
 
@@ -13,6 +14,7 @@ function Home() {
         <div className="div-row">
           {/*<ProductList/>*/}
           {/*<div className="div-exemplo"></div>*/}
+          <Header/>
         </div>
         
        </div>
