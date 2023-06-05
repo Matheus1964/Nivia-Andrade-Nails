@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Dropdown from './Dropdown';
@@ -8,9 +8,17 @@ function Navbar({ isHomePage }) {
   const [dropdown, setDropdown] = useState(false);
   const [transparent, setTransparent] = useState(isHomePage);
   const [produtosActive, setProdutosActive] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(false);
 
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+  const handleClick = () => {
+    setClick(!click);
+    setActiveMenu(!activeMenu);
+  };
+
+  const closeMobileMenu = () => {
+    setClick(false);
+    setActiveMenu(false);
+  };
 
   const onMouseEnter = () => {
     if (window.innerWidth < 960) {
@@ -28,22 +36,19 @@ function Navbar({ isHomePage }) {
     }
   };
 
-  // Deixa a navbar transparente na posição inicial
+  const handleScroll = useCallback(() => {
+    const currentPosition = window.scrollY;
+    if (isHomePage) {
+      setTransparent(currentPosition === 0 && !activeMenu);
+    }
+  }, [isHomePage, activeMenu]);
+
   useEffect(() => {
-
-    const handleScroll = () => {
-      const currentPosition = window.scrollY;
-      if (isHomePage) {
-        setTransparent(currentPosition === 0);
-      }
-    };
-
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-
-  }, [isHomePage]);
+  }, [handleScroll]);
 
   const toggleDropdown = () => {
     setDropdown(!dropdown);
@@ -56,7 +61,7 @@ function Navbar({ isHomePage }) {
 
   return (
     <>
-      <nav className={`navbar ${transparent && isHomePage ? 'transparent' : ''} ${isHomePage ? 'home' : ''}`}>
+      <nav className={`navbar ${transparent && isHomePage && !activeMenu ? 'transparent' : ''} ${isHomePage ? 'home' : ''}`}>
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           Nivia Andrade Naíls
         </Link>

@@ -68,12 +68,11 @@
 
 .navbar.transparent .nav-links:hover {
   background-color: transparent;
-  color: #FA00FF;
 }
 
 
 .nav-links:hover {
-  background-color: #958fab;
+  color: #FA00FF;
   border-radius: 4px;
   transition: all 0.2s ease-out;
 }
