@@ -57,6 +57,8 @@ function BotaoWhatsapp() {
     console.log('Telefone:', telefone);
     console.log('Dúvida:', duvida);
     setIsDialogOpen(false);
+    var url = `https://wa.me/553498162029?text=Nome: ${nome}%0aTelefone: ${telefone}%0a Minha Duvida é:${duvida}`
+    window.open(url, '_blank').focus();
   };
 
   return (
@@ -71,7 +73,7 @@ function BotaoWhatsapp() {
           <button className="close-btn" onClick={handleDialogClose}>
             X
           </button>
-          <form className="form" onSubmit={handleFormSubmit}>
+          <form action="#" className="form" onSubmit={handleFormSubmit}>
             <input id="nome" type="text" placeholder="Nome" value={nome} maxLength="40" minLength="2" onChange={handleNomeChange} required/>
 
             <input id="telefone" type="tel" placeholder="Telefone" value={telefone} onChange={handleTelefoneChange} pattern="\([0-9]{2}\) ?[0-9]{4,5}-?[0-9]{4}" required/>

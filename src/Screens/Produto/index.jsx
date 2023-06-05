@@ -4,6 +4,7 @@ import List from "../../Components/ProductList"
 import Teste from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Navbar"
 import styled from "./Produto.module.css";
+import Tteste from "../../Components/BotaoWhatsapp/BotaoWhatsapp"
 
 
 
@@ -21,7 +22,7 @@ function Produto(){
    <div>
    <Resumo/>
    </div>
-
+    <Tteste/>
     </div>
     <Descricao/>
 
