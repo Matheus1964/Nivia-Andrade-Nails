@@ -44,7 +44,7 @@ function BotaoWhatsapp() {
     } else if (telValue.length === 10) {
       telValue = `(${telValue.substring(0, 2)}) ${telValue.substring(2, 6)}-${telValue.substring(6)}`;
     }
-    setTelefone(telValue);
+    setTelefone(telValue); 
   };
 
   const handleDuvidaChange = (event) => {
