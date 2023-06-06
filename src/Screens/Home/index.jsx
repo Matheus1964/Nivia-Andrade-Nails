@@ -1,30 +1,29 @@
 import React from 'react';
-import styled from './Home.module.css';
-import FundoHome from "../../assets/background.svg"
-import '../../Components/ProductList/ProductList.css'
-import Header from "../../Components/Header/Navbar"
+import styled from "./Home.module.css"
+import BotaoWhatsapp from '../../Components/BotaoWhatsapp/BotaoWhatsapp';
+import Navbar from '../../Components/Header/Navbar'
 import About from '../../Components/About';
-
+import Footer from '../../Components/Footer/Footer';
 
 function Home() {
-
-
   return (
-       <div className="home">
-        <div className={styled.Header}>
-          <img src={FundoHome} alt="" />
+    <div className={styled.home}>
+      <Navbar isHomePage={true}/>
+      <div className={styled.header}>
+        <div className={styled.produtos}>
+        <h2>A VIDA É MUITO CURTA PARA NÃO COLORIR AS UNHAS</h2>  
+        <a href="#matheus"><button >Produtos</button></a>
         </div>
-
-        <main>
-        </main>
+      </div>
+      <main>
         <About/>
-        
-
-        <footer>
-
-        </footer>
-       </div>
-       
+      </main>
+      <footer>
+        <BotaoWhatsapp />
+        <Footer/>
+      </footer>
+      
+    </div>
   );
 }
 

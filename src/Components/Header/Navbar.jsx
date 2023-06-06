@@ -96,10 +96,11 @@ function Navbar({ isHomePage }) {
               Contato
             </Link>
           </li>
+          
           <li className="nav-item">
-            <Link to="/sobre" className="nav-links" onClick={closeMobileMenu}>
-              Sobre
-            </Link>
+          <a href="#Sobre" className="nav-links" onClick={closeMobileMenu}>
+            Sobre
+          </a>
           </li>
         </ul>
       </nav>
