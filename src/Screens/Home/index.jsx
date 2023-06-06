@@ -4,6 +4,8 @@ import BotaoWhatsapp from '../../Components/BotaoWhatsapp/BotaoWhatsapp';
 import Navbar from '../../Components/Header/Navbar'
 import About from '../../Components/About';
 import Footer from '../../Components/Footer/Footer';
+import CardDescription from '../../Components/CardDescription';
+import Cards from "../../Components/Card"
 
 function Home() {
   return (
@@ -12,11 +14,15 @@ function Home() {
       <div className={styled.header}>
         <div className={styled.produtos}>
         <h2>A VIDA É MUITO CURTA PARA NÃO COLORIR AS UNHAS</h2>  
-        <a href="#matheus"><button >Produtos</button></a>
+        <a href="#Produtos"><button >Produtos</button></a>
         </div>
       </div>
       <main>
         <About/>
+        <CardDescription/>
+        <Cards/>
+        
+        
       </main>
       <footer>
         <BotaoWhatsapp />

@@ -1,6 +1,6 @@
 import ProductItem from './ProductItem'
 import './ProductList.css'
-import products from './ProductItem/products.js'
+import products from './ProductItem/products'
 import { useState } from 'react'
 import { Pagination } from 'react-bootstrap'
 
