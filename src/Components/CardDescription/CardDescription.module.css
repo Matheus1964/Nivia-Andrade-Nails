@@ -1,0 +1,46 @@
+.Container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  
+ 
+  background-image: url("../../assets/meninaFundo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+}
+.Cards{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  
+  padding: 10% 0px;
+  
+  
+}
+.Cards img{
+  border-radius: 10px;
+  width: 60%;
+}
+.Cards p{
+  width: 60%;
+}
+.Cards:hover{
+  
+  opacity: 1;
+  transform: scale(1.1);
+}
+@media screen and (max-width: 751px) {
+  .Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+
+}

@@ -1,8 +1,12 @@
+import React from 'react'
 import styled from "./Abount.module.css"
 import Maos from "../../assets/mãos.png"
+
 function About () {
   return(
-    <div className={styled.Container}>
+
+    
+    <div className={styled.Container} id="Sobre">
 
       <img src={Maos} alt="" />
       <div className={styled.About}>

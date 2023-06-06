@@ -1,0 +1,58 @@
+.Container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.Cards_Container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10%;
+  gap: 50px;
+}
+.Cards{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Cards img{
+  width: 100%;
+  
+  background: rgba(217, 217, 217, 0.5);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+}
+.Cards button{
+  cursor: pointer;
+  width: 200px;
+  height: 72.09px;
+
+  border: #FA00FF;
+  border-radius: 20px;
+
+  background-color: #FA00FF;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+}
+.Cards button:hover {
+  background-color: #9747FF;
+
+}
+.Cards:hover{
+  opacity: 1;
+  transform: scale(1.1);
+  
+  
+}
+@media screen and (max-width: 768px) {
+  .Cards_Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+
+}

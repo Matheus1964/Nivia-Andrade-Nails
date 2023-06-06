@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { MenuItems } from './MenuItems';
 import './Dropdown.css';
 import { Link } from 'react-router-dom';
 
@@ -19,19 +18,16 @@ function Dropdown(props) {
         onClick={handleClick}
         className={click ? 'dropdown-menu clicked' : 'dropdown-menu'}
       >
-        {MenuItems.map((item, index) => {
-          return (
-            <li key={index}>
-              <Link
-                className={item.cName}
-                to={item.path}
-                onClick={handleClick}
-              >
-                {item.title}
-              </Link>
-            </li>
-          );
-        })}
+        <li>
+          <Link className="dropdown-link" to="/Produto" onClick={handleClick}>
+            Modelos de 1,7cm
+          </Link>
+        </li>
+        <li>
+          <Link className="dropdown-link" to="/Produto" onClick={handleClick}>
+            Modelos de 2cm
+          </Link>
+        </li>
       </ul>
     </>
   );
