@@ -22,7 +22,7 @@ function Home() {
         <About/>
         <CardDescription/>
         <Cards/>
-        <h1>Matheus matheus</h1>
+        <h1>Matheus matheus Matheus</h1>
         
       </main>
       <footer>
