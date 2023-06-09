@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import './ProductItem.css';
+import { IconContext } from "react-icons";
+import { BsXCircleFill } from "react-icons/bs";
 
 function ProductItem(
 {productId, count, setCount, source}){
@@ -32,8 +34,9 @@ function ProductItem(
   }, [isClicked, count, productId])
 
   function handleIncrement(){
-    setCount(count + 1)
-    setIsSelected(true)
+    if (count <= 998){
+      setCount(count + 1)
+    } 
   }
 
   function handleDecrement(){
@@ -42,19 +45,35 @@ function ProductItem(
     }
   }
 
+  function firstIncrement(){
+    if(count == 0){
+      setCount(count + 1)
+      
+    }
+  }
+
   function handleInputChange(event){
     const numberValue = Number(event.target.value)
 
     if (isNaN(numberValue)) {
       setCount("")
-    } else {
+    } else if(numberValue <= 999) {
       setCount(numberValue)
+    } else {
+      setCount(999)
     }
   }
 
   function handleClick() {
+    if(isSelected === false){
+      firstIncrement()
+    }
     setIsSelected(true)
     setIsClicked(true)
+  }
+
+  function cancelItem(){
+    setCount(0)
   }
 
   function addClassname(text_class){
@@ -74,6 +93,12 @@ function ProductItem(
       onClick={handleClick}
       >
         <div className="element">
+          <div className={`icon-x ${addClassname("icon-visible")}`}>
+            <IconContext.Provider value={{className: "mark-icon"}}>
+              <BsXCircleFill onClick={cancelItem}/>
+            </IconContext.Provider>
+          </div>
+          
           <img className={`product-img ${addClassname("selected")}`} src={source}/>
 
           <div className="align-span">

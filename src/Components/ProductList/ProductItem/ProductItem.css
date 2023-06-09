@@ -1,8 +1,8 @@
 .div-product-item{
   width: fit-content;
-  margin-bottom: 50px;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin-bottom: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .span-id{
@@ -21,13 +21,14 @@
 
 .product-img{
   border: solid black 1.5px;
-  width: 147px;
-  height: 102px;
+  width: 100px;
+  height: 66px;
+  position: relative;
 }
 
 .counter-value{
-  height: 30px;
-  width: 40px;
+  height: 27px;
+  width: 37px;
   font-size: 17px;
   text-align: center;
   margin: 0 2px;
@@ -35,11 +36,11 @@
 }
 
 .button-decrement, .button-increment{
-  height: 30px;
-  width: 30px;
+  height: 27px;
+  width: 27px;
   border: solid #fa00ff 2px;
   background-color: rgb(250, 215, 248);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   cursor: pointer;
   transition: background .25s ease-in-out;
@@ -67,10 +68,39 @@
 
 .element{
   padding: 10px;
+  position: relative;
 }
 
+.mark-icon{
+  height: 25px;
+  width: auto;
+  color: rgb(221, 35, 29);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transform: translate(50%, -50%);
+  background-color: rgb(255, 254, 254);
+  border-radius: 100%;
+  z-index: 3;
+  transition: transform 0.2s ease-out;
+}
 
-@media (min-width: 100px) and (max-width: 230px){
+.icon-x{
+  visibility: hidden;
+  
+}
+
+.icon-visible{
+  visibility: visible;
+  opacity: 1;
+  
+}
+
+.mark-icon:hover {
+  color: rgb(185, 9, 9);
+}
+
+@media (min-width: 100px) and (max-width: 231px){
   
   .product-img{
     border: solid black 1.5px;
@@ -80,9 +110,9 @@
 
   .div-product-item{
     width: fit-content;
-    margin: 10px auto 30px auto;
-    padding-right: 10px;
-    padding-left: 10px;
+    margin: 10px auto 20px auto;
+    padding-right: 5px;
+    padding-left: 5px;
   }
 
   .button-decrement, .button-increment{
@@ -111,11 +141,65 @@
 
 }
 
-@media (min-width: 231px) and (max-width: 400px){
+@media (min-width: 231px) and (max-width: 500px){
   .product-img{
     border: solid black 1.5px;
-    width: 120px;
-    height: 80px;
+    width: 90px;
+    height: auto;
+  }
+
+  .button-decrement, .button-increment{
+    height: 22px;
+    width: 22px;
+    border: solid #fa00ff 2px;
+    background-color: rgb(250, 215, 248);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background .25s ease-in-out;
+  }
+
+  .counter-value{
+    height: 22px;
+    width: 30px;
+    font-size: 14px;
+    text-align: center;
+    margin: 0 2px;
+    border: solid #fa00ff 2px;
+  }
+
+  .div-product-item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    width: fit-content;
+    margin: 10px auto 40px auto;
+  }
+
+  .mark-icon{
+    height: 22px;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 600px){
+  .button-decrement, .button-increment{
+    height: 25px;
+    width: 25px;
+    border: solid #fa00ff 2px;
+    background-color: rgb(250, 215, 248);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background .25s ease-in-out;
+  }
+
+  .counter-value{
+    height: 25px;
+    width: 32px;
+    font-size: 14px;
+    text-align: center;
+    margin: 0 2px;
+    border: solid #fa00ff 2px;
   }
 
   .div-product-item{
