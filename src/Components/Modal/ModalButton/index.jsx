@@ -21,7 +21,7 @@ function ModalButton({isDisabled = false}) {
     mensagem += `\n Quantidade Folhas: ${quantidadeFolhas}`
     mensagem += `\n Total: ${Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valorTotal)}`
 
-    window.open(`https://wa.me/553498162029?text=${mensagem}`, '_target')
+    window.open(`https://wa.me/55553498162029?text=${mensagem}`, '_target')
   }
 
   return (

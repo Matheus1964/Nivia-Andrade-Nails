@@ -8,7 +8,7 @@ export function CartBuyContextProvider({ children }) {
   
   const quantidadeFolhas = quantidadeProdutos > 20 ? Math.ceil(quantidadeProdutos / 20) - 1: 0
 
-  const valorTotal = quantidadeFolhas * 15
+  const valorTotal = quantidadeFolhas * 38
 
   function handleAddProduto(produto) {
     const newProduto = produtos
