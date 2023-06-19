@@ -1,8 +1,11 @@
 import styled from "./ResumodoPedido.module.css"
 import ButtonModal from "../../Components/Modal/ModalButton"
+import { useCartBuy } from "../../hooks/useCartBuy";
 
 
 function Resumo (){
+  const { valorTotal, quantidadeProdutos, quantidadeFolhas } = useCartBuy()
+
   return(
     
     <div className={styled.Container}>
@@ -22,17 +25,17 @@ function Resumo (){
           <p>Falta 11 produtos para completa uma nova folha</p>
           <div className={styled.Inputs_Valor}>
             <label>Quantidade total dos produtos</label>
-            <p className={styled.Total_Resumo}>10</p>
+            <p className={styled.Total_Resumo}>{quantidadeProdutos}</p>
           </div>
           <div className={styled.Inputs_Valor}>
             <label>Quantidade total de folhas</label>
-            <p className={styled.Total_Resumo}>50</p>
+            <p className={styled.Total_Resumo}>{quantidadeFolhas}</p>
           </div>
           <div className={styled.Inputs_Valor}>
             <label>Valor total do produto</label>
-            <p className={styled.Total_Resumo}>R$ 30,00</p>
+            <p className={styled.Total_Resumo}>{Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' } ).format(valorTotal)}</p>
           </div>
-            <ButtonModal/>
+            <ButtonModal isDisabled={quantidadeFolhas === 0} />
 
           
         </div>

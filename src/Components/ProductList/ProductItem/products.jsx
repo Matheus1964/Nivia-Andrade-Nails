@@ -2,7 +2,7 @@ import imagesrc from '../../../assets/img-product.jpg'
 const products = [
   {
     id: 1,
-    src: imagesrc //uma imagem de exemplo
+    src: imagesrc //uma imagem de exemplo,
   },
   {
     id: 2,

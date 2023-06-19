@@ -1,9 +1,13 @@
 import AppRoutes from './Routes/Routes'
 import './App.css';
+import { CartBuyContextProvider } from './context/cartBuyContext';
 
 function App() {
   return (
-    <AppRoutes />
+    <CartBuyContextProvider>
+      <AppRoutes />
+    </CartBuyContextProvider>
+    
   );
 }
 

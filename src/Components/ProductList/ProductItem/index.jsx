@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react';
 import './ProductItem.css';
+import { useCartBuy } from "../../../hooks/useCartBuy";
 
 function ProductItem(
-{productId, count, setCount, source}){
-
+{productId, count, setCount, source, index}){
   const [isSelected, setIsSelected] = useState(
     sessionStorage.getItem(`product_${productId}_isSelected`) === 'true'
   );
+
+  const { handleAddProduto, handleRemoveProduto } = useCartBuy()
+
   const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
@@ -34,11 +37,13 @@ function ProductItem(
   function handleIncrement(){
     setCount(count + 1)
     setIsSelected(true)
+    handleAddProduto({productId, source})
   }
 
   function handleDecrement(){
     if (count > 0) {
       setCount(count - 1)
+      handleRemoveProduto(productId)
     }
   }
 
@@ -50,7 +55,7 @@ function ProductItem(
     } else {
       setCount(numberValue)
     }
-  }
+   }
 
   function handleClick() {
     setIsSelected(true)
@@ -84,7 +89,6 @@ function ProductItem(
               onClick={handleDecrement}>
                 -
               </button>
-
               <input 
               type="text" 
               value={count || 0} 

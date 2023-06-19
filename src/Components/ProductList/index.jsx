@@ -3,6 +3,7 @@ import './ProductList.css'
 import products from './ProductItem/products'
 import { useState } from 'react'
 import { Pagination } from 'react-bootstrap'
+import { v4 } from 'uuid'
 
 function ProductList(){
 
@@ -27,15 +28,17 @@ function ProductList(){
     const endIndex = startIndex + ITEMS_PER_PAGE; 
     const visibleProducts = products.slice(startIndex, endIndex);
 
-    return visibleProducts.map((product, index) => (
-      <ProductItem
+    return visibleProducts.map((product, index) => {
+
+      return (<ProductItem
         key={product.id}
         productId={product.id}
         count={productCounts[startIndex + index] || 0}
         setCount={(value) => handleCountChange(startIndex + index, value)}
         source={product.src}
-      />
-    ));
+        index={index}
+      />)
+    });
   };
 
   const pageItems = [];

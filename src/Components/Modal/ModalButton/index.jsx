@@ -4,14 +4,24 @@ import styled from "./ModalButton.module.css"
 import IconeCarrinho from "../../../assets/IconeCarrinho.svg"
 
 import { useState } from 'react';
+import { useCartBuy } from '../../../hooks/useCartBuy';
 
-function ModalButton() {
-
+function ModalButton({isDisabled = false}) {
+  const { produtos, quantidadeFolhas, valorTotal } = useCartBuy()
   const [modalIsOpen, setIsOpen] = useState(false);
 
-  //adaptar função que será chamada se o botão Finalizar for clicado
+  //adaptar função que será chamada se o botão Finalizar for clicado tropa do pau mole
   function clickFinalizar(){
-    console.log("Finalizado")
+    let mensagem = "Olá, gostaria de fazer o pedido: "
+    
+    produtos.forEach(produto => {
+      mensagem += ` \n - Quantidade do produto ${produto.productId} foi ${produto.quantidade}`
+    })
+
+    mensagem += `\n Quantidade Folhas: ${quantidadeFolhas}`
+    mensagem += `\n Total: ${Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valorTotal)}`
+
+    window.open(`https://wa.me/553498162029?text=${mensagem}`, '_target')
   }
 
   return (
@@ -19,7 +29,7 @@ function ModalButton() {
         {/*botão para teste do modal*/}
         <div className={styled.Button_Carrinho}>
           <img src={IconeCarrinho} alt="Icone do Carrinho" />
-          <button onClick={() => setIsOpen(true)}>Comprar Agora</button>
+          <button disabled={isDisabled} onClick={() => setIsOpen(true)}>Comprar Agora</button>
         </div>
         
         

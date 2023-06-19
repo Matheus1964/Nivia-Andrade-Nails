@@ -14,9 +14,15 @@
 
   color: #000000;
   
+  
 
   
 }
+.ModalButton button:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
 .Button_Carrinho{
   display: flex;
   align-items: center;
