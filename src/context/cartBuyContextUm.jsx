@@ -1,8 +1,8 @@
 import { createContext, useState } from "react";
 
-export const CartBuyContext = createContext({});
+export const CartBuyContextUm = createContext({});
 
-export function CartBuyContextProvider({ children }) {
+export function CartBuyContextUmProvider({ children }) {
   const [produtos, setProdutos] = useState([]);
   const [quantidadeProdutos, setQuantidadeProdutos] = useState(0);
   const [quantidadeFolhas, setQuantidadeFolhas] = useState(0);
@@ -30,7 +30,7 @@ export function CartBuyContextProvider({ children }) {
       }
 
       setProdutos(data);
-      if ((quantidadeProdutos + 1) % 21 === 0) {
+      if ((quantidadeProdutos + 1) % 32 === 0) {
         setQuantidadeFolhas((prevQuantidadeFolhas) => prevQuantidadeFolhas + 1);
       }
     }
@@ -58,13 +58,13 @@ export function CartBuyContextProvider({ children }) {
 
     setProdutos(data);
     setQuantidadeProdutos((prevQuantidadeProdutos) => prevQuantidadeProdutos - 1);
-    if (quantidadeProdutos % 21 === 0) {
+    if (quantidadeProdutos % 32 === 0) {
       setQuantidadeFolhas((prevQuantidadeFolhas) => prevQuantidadeFolhas - 1);
     }
   }
 
   return (
-    <CartBuyContext.Provider
+    <CartBuyContextUm.Provider
       value={{
         produtos,
         valorTotal,
@@ -75,6 +75,6 @@ export function CartBuyContextProvider({ children }) {
       }}
     >
       {children}
-    </CartBuyContext.Provider>
+    </CartBuyContextUm.Provider>
   );
 }

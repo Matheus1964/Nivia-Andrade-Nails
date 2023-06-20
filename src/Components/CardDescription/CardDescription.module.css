@@ -24,10 +24,14 @@
 }
 .Cards img{
   border-radius: 10px;
-  width: 60%;
+  width: 50%;
 }
 .Cards p{
-  width: 60%;
+  width: 40%;
+}
+.Cards img{
+  width: 40%;
+  height: 40%;
 }
 .Cards:hover{
   

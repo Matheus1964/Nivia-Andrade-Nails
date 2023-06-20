@@ -1,0 +1,36 @@
+.ContainerTela{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+}
+.ContainerTela h1{
+  margin-top: 10px;
+  text-align: center;
+}
+.TelaProdutos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  
+}
+.rodape{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+}
+.ListaProduto{
+  width: 75vw;
+}
+@media screen and (max-width: 768px) {
+  .TelaProdutos{
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+
+}

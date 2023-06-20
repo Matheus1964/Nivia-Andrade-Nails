@@ -19,12 +19,12 @@ function Dropdown(props) {
         className={click ? 'dropdown-menu clicked' : 'dropdown-menu'}
       >
         <li>
-          <Link className="dropdown-link" to="/Produto" onClick={handleClick}>
+          <Link className="dropdown-link" to="/Produto/Modelo1.7cm" onClick={handleClick}>
             Modelos de 1,7cm
           </Link>
         </li>
         <li>
-          <Link className="dropdown-link" to="/Produto" onClick={handleClick}>
+          <Link className="dropdown-link" to="/Produto/Modelo2cm" onClick={handleClick}>
             Modelos de 2cm
           </Link>
         </li>

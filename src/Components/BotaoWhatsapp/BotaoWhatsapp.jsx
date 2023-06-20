@@ -57,7 +57,7 @@ function BotaoWhatsapp() {
     console.log('Telefone:', telefone);
     console.log('Dúvida:', duvida);
     setIsDialogOpen(false);
-    var url = `https://wa.me/553498162029?text=Nome: ${nome}%0aTelefone: ${telefone}%0a Minha Duvida é:${duvida}`
+    var url = `https://wa.me/553498162029?text=Olá Nivia, Meu Nome eh:${nome}%0aTelefone:${telefone}%0a Minha Duvida é:${duvida}`
     window.open(url, '_blank').focus();
   };
 

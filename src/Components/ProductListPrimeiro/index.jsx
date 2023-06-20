@@ -1,9 +1,8 @@
-import ProductItem from './ProductItem'
+import ProductItem from './ProductItemPrimeiro'
 import './ProductList.css'
-import products from './ProductItem/products'
+import products from './ProductItemPrimeiro/products'
 import { useState } from 'react'
 import { Pagination } from 'react-bootstrap'
-import { v4 } from 'uuid'
 
 function ProductList(){
 

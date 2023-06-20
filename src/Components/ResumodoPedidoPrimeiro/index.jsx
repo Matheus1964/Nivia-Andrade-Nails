@@ -1,33 +1,33 @@
-import React, { useState, useEffect } from "react";
-import styled from "./ResumodoPedido.module.css";
-import ButtonModal from "../../Components/Modal/ModalButton";
-import { useCartBuy } from "../../hooks/useCartBuy";
+import React, { useState, useEffect } from 'react'
+import styled from './ResumodoPedido.module.css'
+import ButtonModal from '../ModalUm/ModalButton'
+import { useCartBuyUm } from '../../hooks/useCartBuyUm'
 
 function Resumo() {
-  const { valorTotal, quantidadeProdutos, quantidadeFolhas } = useCartBuy();
-  const [faltaProduto, setFaltaProduto] = useState(21);
+  const { valorTotal, quantidadeProdutos, quantidadeFolhas } = useCartBuyUm()
+  const [faltaProduto, setFaltaProduto] = useState(32)
 
   function bb() {
     if (
-      quantidadeProdutos === 21 ||
-      quantidadeProdutos === 42 ||
-      quantidadeProdutos === 63 ||
-      quantidadeProdutos === 84 ||
-      quantidadeProdutos === 105
+      quantidadeProdutos === 32 ||
+      quantidadeProdutos === 64 ||
+      quantidadeProdutos === 128 ||
+      quantidadeProdutos === 256 ||
+      quantidadeProdutos === 512
     ) {
-      return false;
+      return false
     } else {
-      return true;
+      return true
     }
   }
 
   useEffect(() => {
     if (faltaProduto === 0) {
-      setFaltaProduto(21);
+      setFaltaProduto(32)
     } else {
-      setFaltaProduto(21 - (quantidadeProdutos % 21));
+      setFaltaProduto(32 - (quantidadeProdutos % 32))
     }
-  }, [quantidadeProdutos]);
+  }, [quantidadeProdutos])
 
   return (
     <div className={styled.Container}>
@@ -42,9 +42,7 @@ function Resumo() {
         </p>
       </div>
       <div className={styled.Inputs}>
-        <p>
-          Falta {faltaProduto} produtos para completar uma nova folha
-        </p>
+        <p>Falta {faltaProduto} produtos para completar uma nova folha</p>
         <div className={styled.Inputs_Valor}>
           <label>Quantidade total dos produtos</label>
           <p className={styled.Total_Resumo}>{quantidadeProdutos}</p>
@@ -56,16 +54,16 @@ function Resumo() {
         <div className={styled.Inputs_Valor}>
           <label>Valor total do produto</label>
           <p className={styled.Total_Resumo}>
-            {Intl.NumberFormat("pt-BR", {
-              style: "currency",
-              currency: "BRL",
+            {Intl.NumberFormat('pt-BR', {
+              style: 'currency',
+              currency: 'BRL'
             }).format(valorTotal)}
           </p>
         </div>
         <ButtonModal isDisabled={bb()} />
       </div>
     </div>
-  );
+  )
 }
 
-export default Resumo;
+export default Resumo
