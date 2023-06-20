@@ -11,14 +11,14 @@ function Card (){
         <div className={styled.Cards}>
           <h2>Modelo 1,7 Centímentros</h2>
           <img src={Card1} alt="" />
-          <Link to ="/produto">
+          <Link to ="/Produto/Modelo1.7cm">
             <button>Clique Aqui</button>
           </Link>
         </div>
         <div className={styled.Cards}>
           <h2>Modelo 2 Centímentros</h2>
           <img src={Card2} alt="" />
-          <Link to ="/produto">
+          <Link to ="/Produto/Modelo2cm">
             <button>Clique Aqui</button>
           </Link>
           

@@ -4,10 +4,10 @@ import styled from "./ModalButton.module.css"
 import IconeCarrinho from "../../../assets/IconeCarrinho.svg"
 
 import { useState } from 'react';
-import { useCartBuy } from '../../../hooks/useCartBuy';
+import { useCartBuyUm } from '../../../hooks/useCartBuyUm';
 
 function ModalButton({isDisabled = false}) {
-  const { produtos, quantidadeFolhas, valorTotal } = useCartBuy()
+  const { produtos, quantidadeFolhas, valorTotal } = useCartBuyUm()
   const [modalIsOpen, setIsOpen] = useState(false);
 
   //adaptar função que será chamada se o botão Finalizar for clicado tropa do pau mole
