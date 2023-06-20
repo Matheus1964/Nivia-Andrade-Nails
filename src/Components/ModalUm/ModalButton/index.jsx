@@ -12,16 +12,16 @@ function ModalButton({isDisabled = false}) {
 
   //adaptar função que será chamada se o botão Finalizar for clicado tropa do pau mole
   function clickFinalizar(){
-    let mensagem = "Olá, gostaria de fazer o pedido: "
+    let mensagem = "Olá Nivia, Eu gostaria de fazer um Pedido: "
     
     produtos.forEach(produto => {
-      mensagem += ` \n - Quantidade do produto ${produto.productId} foi ${produto.quantidade}`
+      mensagem += ` \n%0AQuantidade de figura (${produto.productId}) foi ${produto.quantidade}`
     })
 
     mensagem += `\n Quantidade Folhas: ${quantidadeFolhas}`
-    mensagem += `\n Total: ${Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valorTotal)}`
+    mensagem += `\n %0ATotal: ${Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valorTotal)}`
 
-    window.open(`https://wa.me/5555349911099?text=${mensagem}`, '_target')
+    window.open(`https://wa.me/553498162029?text=${mensagem}`, '_target')
   }
 
   return (

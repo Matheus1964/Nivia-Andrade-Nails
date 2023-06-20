@@ -3,13 +3,12 @@ import './ProductList.css'
 import products from './ProductItemPrimeiro/products'
 import { useState } from 'react'
 import { Pagination } from 'react-bootstrap'
-import { v4 } from 'uuid'
 
 function ProductList(){
 
   const [productCounts, setProductCounts] = useState(Array(products.length).fill(0))
   const [activePage, setActivePage] = useState(1)
-  const ITEMS_PER_PAGE = 15;
+  const ITEMS_PER_PAGE = 20;
 
   function handleCountChange(index, value) {
     setProductCounts((prevProductCount) => {
