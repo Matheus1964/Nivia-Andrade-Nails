@@ -34,9 +34,9 @@ function Resumo() {
       <h1>Resumo do pedido</h1>
       <div className={styled.Titulo_Manual}>
         <p>
-          Mínimo 21 Números
+          Mínimo 32 Números
           <br />
-          A cada 21 números escolhidos é montada uma folha
+          A cada 32 números escolhidos é montada uma folha
           <br />
           Máximo 5 folhas por pedido
         </p>

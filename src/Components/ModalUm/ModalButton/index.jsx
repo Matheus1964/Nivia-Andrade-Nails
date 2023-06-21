@@ -12,7 +12,7 @@ function ModalButton({isDisabled = false}) {
 
   //adaptar função que será chamada se o botão Finalizar for clicado tropa do pau mole
   function clickFinalizar(){
-    let mensagem = "Olá Nivia, Eu gostaria de fazer um Pedido: "
+    let mensagem = "Produto 1.7 centímetros: "
     
     produtos.forEach(produto => {
       mensagem += ` \n%0AQuantidade de figura (${produto.productId}) foi ${produto.quantidade}`
