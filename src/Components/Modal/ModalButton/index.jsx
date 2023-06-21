@@ -10,7 +10,7 @@ function ModalButton({isDisabled = false}) {
   const { produtos, quantidadeFolhas, valorTotal } = useCartBuy()
   const [modalIsOpen, setIsOpen] = useState(false);
 
-  //adaptar função que será chamada se o botão Finalizar for clicado tropa do pau mole
+  //adaptar função que será chamada se o botão Finalizar for clicado tropa do 2cm
   function clickFinalizar(){
     let mensagem = "Produto 2 centímetros: "
     

@@ -10,7 +10,7 @@ function ModalButton({isDisabled = false}) {
   const { produtos, quantidadeFolhas, valorTotal } = useCartBuyUm()
   const [modalIsOpen, setIsOpen] = useState(false);
 
-  //adaptar função que será chamada se o botão Finalizar for clicado tropa do pau mole
+  //adaptar função que será chamada se o botão Finalizar for clicado tropa do modelo 1.7cm
   function clickFinalizar(){
     let mensagem = "Produto 1.7 centímetros: "
     
@@ -21,7 +21,7 @@ function ModalButton({isDisabled = false}) {
     mensagem += `\n Quantidade Folhas: ${quantidadeFolhas}`
     mensagem += `\n %0ATotal: ${Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valorTotal)}`
 
-    window.open(`https://wa.me/553498162029?text=${mensagem}`, '_target')
+    window.open(`https://wa.me/553499767957?text=${mensagem}`, '_target')
   }
 
   return (
